@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fitness Check-in</title>
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>Fitness Check-in</h1>
+      <p>Submit a sample daily check-in to the local FastAPI service.</p>
+      <form id="checkin-form">
+        <label>Name <input name="name" maxlength="50" required></label>
+        <label>Sleep hours <input name="sleep" type="number" min="0" max="24" step="0.1" required></label>
+        <label>Water glasses <input name="water" type="number" min="0" max="30" required></label>
+        <label>Steps <input name="steps" type="number" min="0" max="100000" required></label>
+        <button type="submit">Save check-in</button>
+      </form>
+      <p id="message" role="status" aria-live="polite"></p>
+      <h2>Saved check-ins</h2>
+      <ul id="checkin-list"></ul>
+    </main>
+  </body>
+</html>
